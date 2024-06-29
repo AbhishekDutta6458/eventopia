@@ -15,25 +15,28 @@ const Header = () => {
         alt="Eventopia Logo"/>
       </Link>
 
-      <SignedIn>
-        <nav className='md:flex-between hidden w-full max-w-xs'>
-          <MobileNav />
-        </nav>
-      </SignedIn>
+      
 
 
       <div className='flex w-32 justify-end gap-3'>
+        
         <SignedIn>
             <UserButton afterSignOutUrl='/'/>
            
         </SignedIn>
     <SignedOut>
+      
         <Button asChild className='rounded-full' size="lg">
             <Link href='/sign-in'>
                 Login
             </Link>
         </Button>
     </SignedOut>
+    <SignedIn>
+        <nav className='md:flex-between hidden w-full max-w-xs'>
+          <MobileNav />
+        </nav>
+      </SignedIn>
       </div>
         </div>
     </header>
